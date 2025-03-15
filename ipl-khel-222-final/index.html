@@ -24,12 +24,27 @@
             <div class="centered box">
                 <div class="text-center black-box">
                     <div><span class="inter font-4 text-white border-g">JOIN NOW</span></div>
-                    <div class="input-group my-md-5 my-4 inp">
-                        <span class="input-group-text" id=""><img src="assets/images/flag.png" class="flg" /> INDIA <img src="assets/images/arrow-down.png" width="8" ></span>
-                        <input type="text" class="form-control form-bg" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                    <div id="mobileInputSection" class="my-md-5 my-4">
+                        <div class="input-group inp">
+                            <span class="input-group-text" id=""><img src="assets/images/flag.png" class="flg" /> INDIA <img src="assets/images/arrow-down.png" width="8" ></span>
+                            <input type="text" class="form-control form-bg" id="mobileNumber" placeholder="Enter Mobile Number" aria-label="Mobile Number">
+                        </div>
+                        <div class="my-3">
+                            <button type="button" class="btn btn-yellow" id="requestOtp">REQUEST OTP</button>
+                        </div>
                     </div>
-                    <div class="my-3">
-                        <a href="otp-verify.html"><button type="button" class="btn btn-yellow">REQUEST OTP</button></a>
+                    <div id="otpSection" class="d-none">
+                        <div class="d-flex justify-content-center my-5 otp-bg">
+                            <input type="text" maxlength="1" class="otp-input">
+                            <input type="text" maxlength="1" class="otp-input">
+                            <input type="text" maxlength="1" class="otp-input">
+                            <input type="text" maxlength="1" class="otp-input">
+                            <input type="text" maxlength="1" class="otp-input">
+                            <input type="text" maxlength="1" class="otp-input">
+                        </div>
+                        <div class="my-3">
+                            <button type="button" class="btn btn-yellow">BET NOW</button>
+                        </div>
                     </div>
                 </div>
                 <div class="mt-4">
@@ -48,6 +63,17 @@
             <div>Privacy Policy</div>
         </div>
     </footer>
+    <script>
+        document.getElementById("requestOtp").addEventListener("click", function() {
+            var mobileNumber = document.getElementById("mobileNumber").value;
+            if (mobileNumber.length >= 10) { 
+                document.getElementById("mobileInputSection").classList.add("d-none");
+                document.getElementById("otpSection").classList.remove("d-none");
+            } else {
+                alert("Please enter a valid mobile number");
+            }
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
