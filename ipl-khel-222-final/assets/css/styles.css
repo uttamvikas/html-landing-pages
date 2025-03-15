@@ -156,7 +156,7 @@ input:focus{
         height: calc(100vh - 221px);
     }
     .centered{top:55%;}
-    .otp-bg{width: 42%;}
+    .otp-bg{width: 50%;}
 }
 
 @media (max-width: 1024px) {
