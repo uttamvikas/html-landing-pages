@@ -1,0 +1,173 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format('truetype');
+}
+@font-face {
+    font-family: Montserrat-ExtraBoldItalic;
+    src: url("../fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf") format('truetype');
+}
+@font-face {
+    font-family: Montserrat-Thin;
+    src: url("../fonts/Montserrat/Montserrat-Thin.ttf") format('truetype');
+}
+@font-face {
+    font-family: Montserrat-ThinItalic;
+    src: url("../fonts/Montserrat/Montserrat-ThinItalic.ttf") format('truetype');
+}
+
+body {
+    font-family: Montserrat-Regular !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-bg{
+    /*background: #000E2C !important;
+    background: url('../images/player-bg.png'), linear-gradient(135deg, rgba(13, 27, 62, 0.8), rgba(59, 29, 94, 0.8));*/
+    background: url('../images/player-bg.png'), #000E2C !important;
+    background-size: 43% 100% !important;
+    background-position: top right !important;
+    background-repeat: no-repeat !important;
+}
+.inter-reg{
+    font-family: Montserrat-Regular;
+}
+.mt-ext-bold{font-family: Montserrat-ExtraBoldItalic !important;}
+.main{flex: 1;display: flex;}
+.header-bg{
+    background: linear-gradient(135deg, #0d1b3e, #3b1d5e);
+    padding: 24px 30px;
+    width: 59.4%;
+    position: relative;
+}
+.header-bg:after{
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: -10%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    -webkit-transform: skewX(331deg);
+    -moz-transform: skewX(331deg);
+    -ms-transform: skewX(331deg);
+    transform: skewX(331deg);
+}
+.font-6{font-size: 6vw;}
+.font-4{font-size: 2vw;}
+.font-2{font-size: 1vw;}
+.font-1{font-size: 0.8vw;}
+.gray{color: rgb(255, 255, 255, 0.8);}
+.blue-box{
+    background: #3F2162;
+    border-radius: 18px;
+    padding: 19px 40px;
+    width: 53%;
+    margin-bottom: 25px;
+}
+.btn-green{
+    border-radius: 8px !important;
+    font-size: 15px !important;
+    background-color: #009739 !important;
+    border: 1px solid #26E36D !important;
+    color: #fff !important;
+}
+.gradient-text {
+    background: linear-gradient(71deg, #e50b62 13.96%, #19F2F7 86.04%);
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+}
+.img-virat{
+    background: url('../images/player-bgg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    background-size: 78% 100%;
+    margin-top: -106px;
+}
+.img-mob-set{
+   /*  width: 100%;
+    height: 303px; */
+    width: 80%;
+    height: 350px;
+    display: block;
+    margin-left: auto;
+}
+.otp-bg{
+    background: rgba(177, 177, 177, 0.17);
+    width: 70%;
+    border-radius: 7px;
+    padding: 6px 12px;
+    margin: 0 auto;
+  }
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    color: #000;
+    margin: 5px;
+    border-radius: 5px;
+    background: rgb(248, 246, 247);
+  
+  }
+@media (max-width: 480px) {
+    .font-4 {font-size: 13px;}
+    .font-2 {font-size: 18px;}
+    .font-1 {font-size: 13px;}
+    .font-6 {font-size: 25px !important;}
+    .header-bg{width: 100% !important;padding: 19px 18px;}
+    .header-bg img{width: 180px !important;}
+    .blue-box{   
+        flex: 1;    
+        width: 91%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .main-bg{
+        background: #000E2C !important;
+    }
+
+    .header-bg:after{position: relative;}
+    .dd{
+        display: flex;
+        flex-direction: column;
+        min-height: 48vh;
+    }
+    .otp-input {
+        width: 26px;
+        height: 26px;
+    }
+    .otp-bg{
+        width: 90%;
+    }
+}
+@media (max-width: 1024px) {
+    .header-bg:after{
+        -webkit-transform: skewX(338deg);
+        -moz-transform: skewX(338deg);
+        -ms-transform: skewX(338deg);
+        transform: skewX(338deg);
+    }
+}
+@media (max-width: 1440px) {
+    .font-6 {
+        font-size: 4.9vw;
+    }
+}
+@media (min-width: 1920px) and (max-width: 2560px)  {
+    .blue-box{width: 33%;}
+
+}
